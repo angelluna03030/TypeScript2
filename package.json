@@ -1,0 +1,15 @@
+{
+  "name": "typescript2",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev" : "node src/index.ts",
+     "tsc" : "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
