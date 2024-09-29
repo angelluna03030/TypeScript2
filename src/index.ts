@@ -16,48 +16,41 @@ const humano = {
   name: "pepe",
   age: 23,
 };
-const a : boolean = false;
-let b : any = "hola camilo"// typo any --> es que IGNORA el tipado de typescript.
+const a: boolean = false;
+let b: any = "hola camilo"; // typo any --> es que IGNORA el tipado de typescript.
 
 /*
 !!! cuando se espera un dicionario piede un dicionario
     |
     | 
     ↓ */
-   function SaludarDiccionarios({name, age}: {name : string , age : number}) {
-     console.log(`hola ${name}, tienes ${age} años`)
-    }
-    
-    
-    
-SaludarDiccionarios({
-  name : "juan",
-  age : 23
-})
+function SaludarDiccionarios({ name, age }: { name: string; age: number }) {
+  console.log(`hola ${name}, tienes ${age} años`);
+}
 
+SaludarDiccionarios({
+  name: "juan",
+  age: 23,
+});
 
 const r = true;
-r ? "es verdadero" : "es falso" ;
+r ? "es verdadero" : "es falso";
 
-
-
-/**   
+/**
  * | esto es un funcion que llama a otra.
  * |                          |
- * |                    la funcion 
+ * |                    la funcion
  * |                          |
- * |                          | el tipo de valor quer vamos a pasarle  
+ * |                          | el tipo de valor quer vamos a pasarle
  * |                          |   |
- * |                          |   |  el tipo de valor que va a retornar 
+ * |                          |   |  el tipo de valor que va a retornar
  * |                          ↓   ↓                  ↓*/
-const soyUnaFromFunction = (fn: (name: string) => void) =>{
-  fn("miguel")
-}
+const soyUnaFromFunction = (fn: (name: string) => void) => {
+  fn("miguel");
+};
 
+const sayHi = (name: string) => {
+  console.log(`Hola ${name}`);
+};
 
-const sayHi = (name: string) =>{
-  console.log(`Hola ${name}`)
-}
-
-
-soyUnaFromFunction(sayHi)
+soyUnaFromFunction(sayHi);
